@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Istudent } from './shared/model/student';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'io-form-viewchild';
+
+  stdArray: Array<Istudent> = [];
+
+  getStdData(data: Istudent) {
+    console.log(data);
+
+    this.stdArray.push(data)
+  }
 }
